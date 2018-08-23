@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <div *ngIf="excercise">
+   <div *ngIf="show">
+      <div> Level : {{level}}</div>
+     <div> Timer : {{counter}}</div>
+    <div>
+      {{excercise.firstNumber}} + {{excercise.secondNumber}} = ? 
+      <input type="text" name="answer" #useranswer/><button type="button" (click)="onSubmit(useranswer)">Submit</button>
+    </div>
+  </div>
+</div>
+<div *ngIf="restart">
+    <button type="button" (click)="onRestart()">Play Again</button>
+</div>
+</div>
+
+
